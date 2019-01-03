@@ -27,11 +27,12 @@ CREATE TABLE hocsinh(
     GiaoVien varchar(30) not null
      );
 
-CREATE TABLE dangnhap(
+create TABLE dangnhap(
     TenDN varchar(15) not null,
-    Matkhau char(6),
-    PRIMARY KEY (TenDN, Matkhau)
-    );
+    Matkhau char(6) not null,
+    Quyen varchar(20),
+    primary key (TenDN, Matkhau)
+    )
 create TABLE nhanxet(
     NgayNX date not null PRIMARY KEY,
     MaHS varchar(6) not null,
@@ -114,3 +115,8 @@ INSERT INTO `hocsinh`(`MaHS`, `MaPH`, `HoTen`, `TenLop`, `NgaySinh`, `Chieucao`,
 INSERT INTO `hocsinh`(`MaHS`, `MaPH`, `HoTen`, `TenLop`, `NgaySinh`, `Chieucao`, `Cannang`, `GT`, `NgayNH`, `GiaoVien`) VALUES ('HS1027','PH0127','Đinh Công Lam','3.5-4.5 tuoi','2014-12-15','81 cm','16.2 kg','Nam','2018-08-06','Lưu Quỳnh Như');
 INSERT INTO `hocsinh`(`MaHS`, `MaPH`, `HoTen`, `TenLop`, `NgaySinh`, `Chieucao`, `Cannang`, `GT`, `NgayNH`, `GiaoVien`) VALUES ('HS1028','PH0128','Nguyễn Ngọc Trâm','3.5-4.5 tuoi','2014-11-29','89 cm','14 kg','Nữ','2018-08-06','Lưu Quỳnh Như');
 INSERT INTO `hocsinh`(`MaHS`, `MaPH`, `HoTen`, `TenLop`, `NgaySinh`, `Chieucao`, `Cannang`, `GT`, `NgayNH`, `GiaoVien`) VALUES ('HS1029','PH0129','Nguyễn Thành Công','3.5-4.5 tuoi','2014-10-09','90 cm','15.2 kg','Nam','2018-08-07','Lưu Quỳnh Như');
+
+--bảng dangnhap
+INSERT INTO `dangnhap`(`TenDN`, `Matkhau`, `Quyen`) VALUES ('Hoan',987654,'giaovien');
+INSERT INTO `dangnhap`(`TenDN`, `Matkhau`, `Quyen`) VALUES ('Linh',123456,'giaovien');
+INSERT INTO `dangnhap`(`TenDN`, `Matkhau`, `Quyen`) VALUES ('Thao',123456,'phuhuynh');
